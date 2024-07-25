@@ -9,13 +9,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/register")
+    @GetMapping("/index")
     public String showRegistrationForm(Model model) {
         model.addAttribute("user", new User());
-        return "register";
+        return "index";
     }
 
-    @PostMapping("/register")
+    @PostMapping("/index")
     public String registerUser(@ModelAttribute("user") User user) {
         userService.register(user);
         return "redirect:/login";

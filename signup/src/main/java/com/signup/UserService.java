@@ -7,7 +7,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public User register(User user) {
+    public User index(User user) {
         return userRepository.save(user);
     }
 
